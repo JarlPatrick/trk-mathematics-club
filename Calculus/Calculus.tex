@@ -1,0 +1,142 @@
+\documentclass[a4paper,11pt,twocolumn]{article}
+\input{structure.tex}
+\usepackage{blindtext}
+
+\begin{document}
+{\huge \textbf{Calculus}\hfill \normalsize {nr 1}} \\
+{Jarl Patrick Paide \hfill 14. jaanuar 2020}
+
+\section{Tuletis}
+
+Tuletis näitab funktsiooni muutumise kiirust. Graakifult vaadates on tuletis mingi funktsiooni puutuja tõus mingis punktis. Tuletist võttes saame me uus funktsiooni mis näitab seda tõusu sõltuvuses $x$'ist. Kui meil on funktsioon $f(x)$ siis on selle funktsiooni tuletis $f'(x)$ on deffineeritud järgnevalt
+\begin{equation*}
+f'(x) = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(x+\Delta x) - f(x)}{\Delta x}
+\end{equation*}
+$\Delta x$ asemel võib kasutada tähist $dx$, kui muutus on väga väike
+\begin{equation*}
+\lim_{\Delta x \to 0} \Delta x = dx
+\end{equation*}
+
+Seega kui me võtame tuletis funktsioonist $f(x)$, $x$'i järgi siis saab seda tähistada järgnevalt
+\begin{equation*}
+f'(x)=\frac{d}{dx}f(x) = \frac{f(x+ dx) - f(x)}{dx}
+\end{equation*}
+
+Vaatame, kuidas me saame kasutades tuletis deffinitsiooni leida lihtsa tuletise funktsioonist $f(x) = x$
+
+\begin{equation*}
+f'(x) = \frac{(x+dx) - (x)}{dx} = \frac{dx}{dx} = 1
+\end{equation*}
+
+Kui mõelda selle funktsiooni graafikule siis on see vastus usutav ja loogiline.
+
+\subsection{Konstandid}
+Kui meil on funktsioon $f(x) = a$ siis on see funktsioon konstantne. Graafikul vaadates on tegemist x-teljega paralleelse sirgega, mis läbib y-telge punktis a. Kuna selle funktsiooni tõus igas punnktis on 0, siis on selle funktsiooni tuletis $f'(x) = 0$
+
+Kui meil on funktsioon $f(x) = ag(x)$ siis kasutades tuletise deffinitsiooni saame teha järgnevat
+\begin{equation*}
+f'(x) = \frac{ag(x+dx)-ag(x)}{dx} = a\frac{g(x+dx)-g(x)}{dx}=ag'(x)
+\end{equation*}
+Ehk siis kui meil funktsioon $f(x) = ag(x)$ siis me saame tuua konstanti ette ja võtta tuletist ülejäänud funktsioonist.
+
+\subsection{Polünomid}
+Vaatame lihtsat funktsiooni $f(x) = x^2$ ja võttame sellest funktsioonist tuletist tuletise deffinitsiooni abiga
+\begin{multline*}
+f'(x) = \frac{(x+dx)^2-(x)^2}{dx} = \frac{x^2 + 2xdx + dx^2 - x^2}{dx} = \\
+= 2x + dx = 2x
+\end{multline*}
+
+Kui $x=0$ siis see funktsioon fuutub x-telge, seega on loogiline, et tuletis, ehk tõus, on selles punktsi 0. Kui $x=1$ siis on funktsiooni väärtus 1, aga tõus selles punktis on 2. See funktsioon kahaneb vahemikus $x<0$ seega on loogiline, et seal on funktsiooni tuletis negatiivne. Vastupidi jällegi juhul kui $x>0$. Ning mida suuremaks x muutub seda kiiremini hakkab funktsioon muutuma, seega funktsiooni puutuja tõus suureneb.
+
+Vaatame nüüd polünomi üldjuhtu $f(x) = x^n$
+\begin{multline*}
+f'(x) = \frac{(x+dx)^n-x^n}{dx} = \frac{(x^n+nx^{n-1}dx+...+dx^n)-x^n}{dx}= \\
+=nx^{n-1}+(n(n-1)/2)x^{n-2}dx+...+dx^{n-1}= nx^{n-1}
+\end{multline*}
+Seega $\frac{d}{dx}(x^n)=nx^{n-1}$, ehk kui $f(x)=2x^3$ siis $f'(x)=6x^2$.
+
+\subsection{Funktsioonide liitmine}
+Olgu meil funktsioon $f(x) = g(x) + h(x)$ ja vaatame, kuidas leida tuletist $f'(x)$
+\begin{multline*}
+f'(x) = \frac{(g(x+dx)+h(x+dx))-(g(x)+h(x))}{dx} = \\
+= \frac{g(x+dx) - g(x)}{dx} + \frac{h(x+dx) - h(x)}{dx} = g'(x) + h'(x)
+\end{multline*}
+Seega kui funktsioon on funktsioonide summa siis on selle funktsiooni tuletis nende summa liikmete tulemiste summa.
+
+\subsection{Funkstioonide korrutamine}
+Olgu meil funktsioon $f(x) = g(x)h(x)$ ja vaatame, kuidas leida tuletist $f'(x)$
+\begin{equation*}
+f'(x) = \frac{(g(x+dx)h(x+dx)) - (g(x)h(x))}{dx} = 
+\end{equation*}
+Me võime liita ja lahutada murru lugejast sama arvu $g(x)h(x+dx)$ ja me teame, et suvaline funktsioon $k(x+dx) = k(x)$ seega saame
+\begin{multline*}
+= \frac{g(x+dx)h(x+dx) - g(x)h(x+dx) + g(x)h(x+dx) - g(x)h(x)}{dx} = \\
+= \frac{h(x+dx)(g(x+dx)-g(x))}{dx} + \frac{g(x)(h(x+dx)-h(x))}{dx} = \\
+= g'(x)h(x) + g(x)h'(x)
+\end{multline*}
+Seeda saab lihtsamalt kirjutada. Kui meil on funktsioonid $u$ ja $v$, mis mõlemad sõltuvad $x$'ist, siis $(uv)' = u'v + uv'$.
+
+\subsection{Liitfunktsioonid ?}
+Olgu meil funktsioon $f(x) = g(h(x))$. Näiteks, seega kui $h(x) = x+1$ ja $g(x) = x^2$ siis $f(x) = g(x+1) = (x+1)^2$. Nüüd vaatame, kuidas sellisest funktsioonist tuletist võtta. Tuletise deffinitsioonist saame
+\begin{equation*}
+f'(x) = \frac{g(h(x+dx)) - g(h(x))}{h(x+dx) - h(x)} \cdot \frac{h(x+dx) - h(x)}{dx}
+\end{equation*}
+Kui me teeme asenduse $h(x) = a$ ja $h(x+dx) = a + da$, siis saame, et
+\begin{multline*}
+f'(x) = \frac{g(a+da) - g(a)}{da} \cdot \frac{h(x+dx) - h(x)}{dx} = \\
+= \frac{dg(a)}{da}\cdot\frac{da}{dx} = \frac{dg(h(x))}{dh(x)}\cdot\frac{dh(x)}{dx}
+\end{multline*}
+Kuna sellest võib olla raske aru saada teeme läbi ühe näite. Olgu meil funktsioon $f(x) = (x+1)^2$, ja võtame $h(x) = x+1$ ja $g(x) = x^2$ siis $f(x) = g(h(x))$. Me võime teha asenduse $a = h(x)$. Seega tuletis on 
+\begin{multline*}
+f'(x) = \frac{d(x+1)^2}{d(x+1)} \cdot \frac{d(x+1)}{dx} = \frac{d a^2}{da} \cdot \frac{d(x+1)}{dx} =\\
+= (2a) \cdot (1+0) = 2(x+1) = 2x+2
+\end{multline*}
+Kuna me oskame nüüd ka teist moodi seda tuletist võtta teeme kontrolliks ka selle läbi
+\begin{equation*}
+((x+1)^2)' = (x^2 + 2x + 1)' = (x^2)' + (2x)' + (1)' = 2x + 2
+\end{equation*}
+Seega kõik töötab
+
+\subsection{Funktsioonide jagamine}
+Vaatame nüüd jagatist $\frac{u}{v}$ ja leiame selle tuletise.
+\begin{equation*}
+(\frac{u}{v})'= (u\cdot\frac{1}{v})'=u'(\frac{1}{v})+u(\frac{1}{v})'
+\end{equation*}
+Kuna $\frac{1}{v}$ on liitfunktsoon siis selle tuletis on
+\begin{equation*}
+(\frac{1}{v})' = \frac{d (1/v)}{dv} \cdot \frac{dv}{dx} = \frac{-1}{v^2} \cdot v'
+\end{equation*}
+Seega on jagatise tuletis 
+\begin{equation*}
+(\frac{u}{v})'=u'(\frac{1}{v})+u(\frac{1}{v})' = \frac{u'v-uv'}{v^2}
+\end{equation*}
+
+\subsection{Sin ja Cos}
+Siinuse ja Cosiinuse summa abivalemid
+\begin{equation*}
+\sin(\alpha\pm\beta) = \sin(\alpha)\cos(\beta)\pm\sin(\beta)\cos(\alpha)
+\end{equation*}
+\begin{equation*}
+\cos(\alpha\pm\beta) = \cos(\alpha)\cos(\beta)\mp\sin(\alpha)\sin(\beta)
+\end{equation*}
+Võtame funktsioonist $f(x) = \sin(x)$ tuletist kasutades tuletise deffinitsiooni
+\begin{equation*}
+f'(x) = \frac{\sin(x+dx)-\sin(x)}{dx} =
+\end{equation*}
+Kuna $dx$ läheneb nullile siis $\cos(dx) = 1$ ja $\sin(dx)/dx=1$ ja sellest saame, et 
+\begin{equation*}
+= \frac{\sin(x)\cos(dx)+\cos(x)\sin(dx)-\sin(x)}{dx} = \cos(x)
+\end{equation*}
+
+Vaatame nüüd juhtu $f(x) = \cos(x)$
+\begin{multline*}
+f'(x) = \frac{\cos(x+dx)-\cos(x)}{dx} = \\
+= \frac{\cos(x)\cos(dx) - \sin(x)\sin(dx) - \cos(x)}{dx} = -\sin(x)
+\end{multline*}
+Kuna me saame konstantid tuletiest välja võtta saame, et $(-\sin(x))' = -\cos(x)$ ja $(-\cos(x))' = \sin(x)$. Kuna ülejäänud trigonomeetrilisi võrrandeid saab nende kahe abil leida, siis piisab nende kahe tuletisest. Leiame näiteks $\tan(x)$ tuletise
+\begin{multline*}
+\tan(x)'=(\frac{\sin(x)}{\cos(x)})'  = \frac{\sin(x)'\cos(x)-\cos(x)'\sin(x)}{\cos^2(x)}=\\
+=\frac{\cos^2(x) + \sin^2(x)}{\cos^2(x)} = \sec^2(x)
+\end{multline*}
+
+\end{document}
