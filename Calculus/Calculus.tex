@@ -139,4 +139,73 @@ Kuna me saame konstantid tuletiest välja võtta saame, et $(-\sin(x))' = -\cos(
 =\frac{\cos^2(x) + \sin^2(x)}{\cos^2(x)} = \sec^2(x)
 \end{multline*}
 
+\subsection{Logarütm}
+Nüüd vaatame logarütmilisi funktsioone. Alustame funktsioonist $f(x) = \ln x$. Selle jaoks meil vaja $e$ deffinitsiooni, mis on järgnev
+\begin{equation*}
+e=\lim_{n \to \infty}(1+\frac{1}{n})^n \approx 2.718281828459...
+\end{equation*}
+Kasutades tuletise deffinitsiooni saame järgneva
+\begin{multline*}
+  f'(x)=\frac{\ln(x+dx) - \ln(x)}{dx}=\frac{1}{dx}\ln(1-\frac{dx}{x})=\\
+  =\ln((1+\frac{dx}{x})^{\frac{1}{dx}}
+\end{multline*}
+Teeme nüüd asenduse $u=\frac{x}{dx}$
+\begin{equation*}
+\ln((1+\frac{dx}{x})^{\frac{1}{dx}})=\lim_{u \to \infty}\ln((1+\frac{1}{u})^{\frac{u}{x}}) = \lim_{u \to \infty}\frac{1}{x}\ln((1+\frac{1}{u})^{u})=
+\end{equation*}
+Märkame, et viimase logarütmi sees on $e$, seega jätkame
+\begin{equation*}
+=\frac{\ln(e)}{x}=\frac{1}{x}
+\end{equation*}
+Nüüd leiame tuletise suvalisele logarütmile $f(x)=\log_{a}(x)$
+\begin{equation*}
+f'(x)=(\log_{a}(x))'=(\frac{\ln(x)}{\ln(a)})'=
+\end{equation*}
+Kuna aga $\ln(a)$ on konstant, võib selle välja tuua ja siis saame
+\begin{equation*}
+=\frac{1}{\ln(a)}(\ln(x))'=\frac{1}{\ln(a)x}
+\end{equation*}
+
+\subsection{eksponendid}
+Nüüd vaatame eksponentfunktsioone. Alustame funktsiooniga $f(x)=e^x$. Liitfunktsiooni tuletisest me teame järgnevat
+\begin{multline*}
+  (\ln(e^x))'=\frac{1}{e^x}(e^x)'\\
+  (x)'e^x=(e^x)'\\
+  (e^x)'=e^x
+\end{multline*}
+Vaatame nüüd funktsiooni $f(x)=a^x$. Me saame seda funktsiooni ümber kirjutada kujul $f(x)=e^{x\ln(a)}$.
+\begin{multline*}
+f'(x)=(e^{x\ln(a)} )'=e^{x\ln(a)}(x\ln(a))'=a^x\ln(a)
+\end{multline*}
+
+\subsection{Kokkuvõte}
+Nüüd me oleme tõestanud ja näidanud, kuidas võtta elementaarfunktsioonidest tuletise ja kuidas võtta mitmset erinevast funktioonist koosnevast fuktsioonist tuletist. Seega nüüd on oskus võtta kõigist funktsioonidest tuletist. Et võtta kõik kokku on järgnev kokkuvõttev tabel. ($u$ ja $v$ on tabelis x sõltuvad erinevad funktsioonid)
+
+\begin{table}[h]
+  \centering
+  \caption{Põhifunktsioonide tuletised}
+  \begin{tabular}{c | c}
+    \hline
+    funktsioon & tuletis\\
+    \hline
+    $(cu)'$ & $cu'$\\
+    $(u+v)'$ & $u'+v'$\\
+    $(uv)'$ & $u'v+v'u$\\
+    $(u/v)'$ & $(u'v-v'u)/v^2$\\
+    $du(v)/dx$ & $(du/dv)(dv/dx)$\\
+    \hline
+    $c$ & $0$\\
+    $x^n$ & $nx^{n-1}$ \\
+    $\sin x$ & $\cos x$\\
+    $\cos x$ & $-\sin x$\\
+    $\tan x$ & $\sec^2 x$\\
+    $\ln x$ & $1/x$\\
+    $\log_a x$ & $1/(x\ln a)$\\
+    $e^x$ & $e^x$\\
+    $a^x$ & $e^x\ln a$    
+  \end{tabular}
+\end{table}
+
+\section{Tuletise rakendused ja ülesanded}
+
 \end{document}
