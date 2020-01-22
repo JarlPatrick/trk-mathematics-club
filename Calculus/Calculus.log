@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Arch Linux)  (format=lualatex 2020.1.16)  17 JAN 2020 12:06
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Arch Linux)  (format=lualatex 2020.1.16)  22 JAN 2020 09:59
  restricted system commands enabled.
 **Calculus.tex
 (./Calculus.tex
@@ -384,12 +384,12 @@ braces):
 >  {estonian/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {estonian/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for estonian
-(polyglossia)            hyphenation	
-(polyglossia)            righthyphenmin	3
-(polyglossia)            patterns	hyph-et.pat.txt
 (polyglossia)            lefthyphenmin	2
+(polyglossia)            patterns	hyph-et.pat.txt
 (polyglossia)            loader	loadhyph-et.tex
-(polyglossia)            synonyms	table: 0x5595562cabd0
+(polyglossia)            righthyphenmin	3
+(polyglossia)            synonyms	table: 0x55ef017522b0
+(polyglossia)            hyphenation	
 (polyglossia)            patterns: hyph-et.pat.txt on input line 8
 Module polyglossia Info: Language estonian was not yet loaded; created with id 2
  on input line 8
@@ -1357,6 +1357,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
+<joon1.png, id=90, 470.75874pt x 447.6725pt>
+File: joon1.png Graphic file (type png)
+<use joon1.png>
+Package luatex.def Info: joon1.png  used on input line 215.
+(luatex.def)             Requested size: 227.61858pt x 216.4583pt.
+
+Underfull \vbox (badness 1107) has occurred while \output is active []
+
+ [3<./joon1.png>]
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -1389,45 +1398,45 @@ braces):
 >  {estonian/babelname}  =>  {estonian}
 >  {estonian/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {estonian/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-
-[3
+ [4
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 232.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 261.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 261.
  (./Calculus.aux
 luatex-hyphen: loading patterns and exceptions for: estonian (\language2)
 luatex-hyphen: info: no hyphenation exceptions for this language)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 232.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 232.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 261.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 261.
 Package rerunfilecheck Info: File `Calculus.out' has not changed.
-(rerunfilecheck)             Checksum: 04A32D5EEB64CB88129B50F91FBE9AD7;1861.
+(rerunfilecheck)             Checksum: 938093EB3A92681A376FEE36D0011FA9;2278.
 )
 
 Here is how much of LuaTeX's memory you used:
- 48933 strings out of 493864
+ 48955 strings out of 493864
  125171,1373583 words of node,token memory allocated
- 615 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 28 attribute, 60 glue_spec
-, 28 attribute_list, 2 write nodes
-   avail lists: 1:2,2:1061,3:217,4:63,5:444,6:30,7:4743,8:71,9:823,10:21,11:447
- 52492 multiletter control sequences out of 65536+600000
+ 623 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 30 attribute, 60 glue_spec
+, 30 attribute_list, 2 write nodes
+   avail lists: 1:2,2:1057,3:217,4:67,5:444,6:30,7:5295,8:71,9:823,10:21,11:530
+ 52503 multiletter control sequences out of 65536+600000
  49 fonts using 7783479 bytes
  69i,10n,77p,849b,803s stack positions out of 5000i,500n,10000p,200000b,100000s
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/f
-onts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.
-enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/
-share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-d
-ist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/l
-m/lmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/t
-exmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1
-/public/lm/lmsy8.pfb>
-Output written on Calculus.pdf (3 pages, 121688 bytes).
+</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf>{/usr/share/t
+exmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvip
+s/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/sha
+re/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-d
+ist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/typ
+e1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><
+/usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fon
+ts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.p
+fb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/
+fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lm
+sy8.pfb>
+Output written on Calculus.pdf (4 pages, 150995 bytes).
 
-PDF statistics: 128 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
- 18 named destinations out of 1000 (max. 131072)
- 120 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 155 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 131072)
+ 144 words of extra memory for PDF output out of 10000 (max. 100000000)
 
